@@ -20,12 +20,12 @@ def inspect(path: Path) -> dict:
 
 def validate(data: dict) -> None:
     members = {m["id"]: m for m in data["members"]}
-        for member in members.values():
-            assert member["key"] in data["owners"]["k"]
-            assert member["value"] in data["owners"]["v"]
-        queries = {q["id"]: q for q in data["queries"]}
-        assert all(set(q["visible"]) <= members.keys() for q in queries.values())
-        assert all(s["query"] in queries for s in data["heads"])
+    for member in members.values():
+        assert member["key"] in data["owners"]["k"]
+        assert member["value"] in data["owners"]["v"]
+    queries = {q["id"]: q for q in data["queries"]}
+    assert all(set(q["visible"]) <= members.keys() for q in queries.values())
+    assert all(s["query"] in queries for s in data["heads"])
 
 
 def main() -> None:
