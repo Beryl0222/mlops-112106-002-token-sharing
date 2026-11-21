@@ -1,0 +1,157 @@
+{
+  "owners": {
+    "q": {
+      "qa": [
+        1,
+        0,
+        2
+      ],
+      "qb": [
+        1,
+        0,
+        2
+      ]
+    },
+    "k": {
+      "k0": [
+        1,
+        2,
+        0
+      ],
+      "k1": [
+        1,
+        2,
+        0
+      ],
+      "k2": [
+        -1,
+        0,
+        1
+      ]
+    },
+    "v": {
+      "v0": [
+        1,
+        4
+      ],
+      "v1": [
+        1,
+        4
+      ],
+      "v2": [
+        0,
+        3
+      ]
+    }
+  },
+  "members": [
+    {
+      "id": "f0",
+      "group": "face",
+      "key": "k0",
+      "value": "v0"
+    },
+    {
+      "id": "f1",
+      "group": "face",
+      "key": "k0",
+      "value": "v0"
+    },
+    {
+      "id": "f2",
+      "group": "face",
+      "key": "k1",
+      "value": "v1"
+    },
+    {
+      "id": "g0",
+      "group": "ground",
+      "key": "k2",
+      "value": "v2"
+    }
+  ],
+  "queries": [
+    {
+      "id": "near",
+      "owner": "qa",
+      "visible": {
+        "f0": 0.5,
+        "f1": -1,
+        "f2": 0,
+        "g0": 0.1
+      }
+    },
+    {
+      "id": "side",
+      "owner": "qa",
+      "visible": {
+        "f1": 0.3,
+        "g0": 0
+      }
+    },
+    {
+      "id": "wide",
+      "owner": "qb",
+      "visible": {
+        "f0": -4,
+        "f2": 2,
+        "g0": 0
+      }
+    },
+    {
+      "id": "closed",
+      "owner": "qb",
+      "visible": {}
+    }
+  ],
+  "next_visibility": {
+    "near": {
+      "f0": 0.5,
+      "f2": 0.2,
+      "g0": 0.1
+    },
+    "side": {
+      "f0": -0.4,
+      "f1": 0.3
+    }
+  },
+  "heads": [
+    {
+      "id": "a0",
+      "query": "near",
+      "dy": [
+        1,
+        2
+      ],
+      "dp": {
+        "f0": 1,
+        "f2": -2
+      }
+    },
+    {
+      "id": "a1",
+      "query": "near",
+      "dy": [
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "b0",
+      "query": "wide",
+      "dy": [
+        -3,
+        1
+      ]
+    },
+    {
+      "id": "b1",
+      "query": "closed",
+      "dy": [
+        4,
+        5
+      ]
+    }
+  ],
+  "budget_bytes": 131072
+}
